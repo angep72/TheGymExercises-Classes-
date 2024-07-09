@@ -27,4 +27,24 @@ function d01(a,b) {
   let num = a-b;
   return !num?true:false
  }
+ exports.users = [
+    {
+        name: 'Max Mustermann',
+        age: 25,
+        occupation: 'Chimney sweep'
+    },
+    {
+        name: 'Kate Müller',
+        age: 23,
+        occupation: 'Astronaut'
+    }
+];
+function logPerson(user) {
+    console.log(` - ${user.name}, ${user.age}`);
+}
+console.log('Users:');
+exports.users.forEach(logPerson);
+// In case you are stuck:
+// https://www.typescriptlang.org/docs/handbook/2/objects.html
+
     
