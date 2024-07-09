@@ -11,4 +11,10 @@ function smaller(nums) {
           return result; 
         
       }
+      //Coffee
+      function coffee(str) {
+  const Reg = new RegExp("coffee","gi");
+  let matches = str.replaceAll(Reg,"COFFEE");
+  return matches
+}
     
