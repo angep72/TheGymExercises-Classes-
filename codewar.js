@@ -22,4 +22,9 @@ function bearDollars(arr) {
   var obj = {'close friend': 1, 'friend': 2, 'acquaintance': 4};
   return arr.reduce((a,b) => a + (b[0] * ((obj.hasOwnProperty(b[1].toLowerCase())) ? obj[b[1].toLowerCase()] : 5) * 25), 0);
 }
+//without comparison kata
+function d01(a,b) {
+  let num = a-b;
+  return !num?true:false
+ }
     
