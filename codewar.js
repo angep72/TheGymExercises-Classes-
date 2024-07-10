@@ -76,3 +76,13 @@ function logPerson(user) {
     console.log(` - ${user.name}, ${user.age}`);
 }
 exports.persons.forEach(logPerson);
+// function declaration in typescript 
+function processInput(x) {
+    if (typeof x === "string") {
+        console.log(x.toString);
+    }
+    if (typeof x === "number") {
+        console.log(x * 2);
+    }
+}
+processInput(3);
