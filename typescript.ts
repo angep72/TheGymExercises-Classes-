@@ -41,4 +41,28 @@ const Aline : Manager={
     employees:[kii]
 }
 
-console.log(printstaff(Aline))
+console.log(printstaff(Aline));
+//How to use abstract class 
+abstract class Computer {
+    readonly id:number=0
+    abstract brand:string;
+    abstract ram:number;
+    storage?:number
+    abstract upgrade(num:number):number
+    
+    }
+    class laptop implements Computer{
+        name:string
+        constructor(name:string){
+        this.name=name
+        }
+     id=2
+    brand="hp"
+    ram=34
+    upgrade(num:number):number{
+        return 0
+    }
+    }
+    const person = new laptop("lenevo");
+    console.log(person.id)
+    
