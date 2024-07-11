@@ -138,15 +138,29 @@
 //     console.log(mynumber(2))
 
 //Type of guards typof 
-function mynumber (x:number):boolean{
-    if (typeof x === "number"){
-        return true
-    }else{
-    return false
-    }
-}
-console.log(mynumber(3))
+// function mynumber (x:number):boolean{
+//     if (typeof x === "number"){
+//         return true
+//     }else{
+//     return false
+//     }
+// }
+// console.log(mynumber(3))
 
+
+
+
+// type assetion 
+let arr:(number|string|boolean)[]=[1,"hello",true]
+console.log(`the mixed values are: ${arr}`)
+//Using type assertion
+const num:number[]=arr.filter((el):el is number=>{
+    return typeof el === "number"
+})
+console.log(`the numbers are ${num}`);
+const stringonly:string[]=arr.filter((el):el is string=>{
+return typeof el === "string"
+})
 
 
 
