@@ -81,3 +81,14 @@
         return result
     }
     console.log(differenceOfSquares(23))
+    //Sorting usind array of arrays 
+    function sort(initialArray:string[], sortingArray:number[]):string[] {
+        let newArr:string[]=[];
+        for (let a in initialArray){
+          console.log(initialArray[a])
+          newArr[sortingArray[a]]=initialArray[a]
+        }
+        return newArr
+      }
+      console.log(sort(['x', 'y', 'z'],[1,2,0]))
+      
