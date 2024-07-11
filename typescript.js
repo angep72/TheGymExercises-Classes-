@@ -153,9 +153,17 @@
 //7.Write a TypeScript program that declares a variable as type any and uses a type assertion to explicitly cast it to type string.  
 //Click me to see the solution
 // Declare a variable 'anyValue' as type 'any'
-let anyValue = "This is type 'any'";
-// Use a type assertion to cast 'anyValue' to type 'string'
-let stringValue = anyValue;
-// Print the value and type of 'stringValue'
-console.log("stringValue:", stringValue);
-console.log("Type of stringValue:", typeof stringValue);
+// let anyValue: any = "This is type 'any'";
+// // Use a type assertion to cast 'anyValue' to type 'string'
+// let stringValue: string = anyValue as string;
+// // Print the value and type of 'stringValue'
+// console.log("stringValue:", stringValue);
+// console.log("Type of stringValue:", typeof stringValue);
+//8 Write a TypeScript function that accepts a parameter of type string | string[] and returns the length of the input string. It also returns the sum of the lengths of all strings in the array. Use type assertions to let TypeScript know the parameter type.  
+//Click me to see the solution
+function mynumber(x) {
+    let stringValues = (typeof x ? x : [x]);
+    let arrayValues = (typeof x ? [x] : x);
+    return arrayValues.map((el) => el.length).reduce((acc, curr) => acc + curr);
+}
+console.log(mynumber(["Ange", "Pauline"]));
