@@ -140,13 +140,22 @@
 // }
 // console.log(mynumber(3))
 // type assetion 
-let arr = [1, "hello", true];
-console.log(`the mixed values are: ${arr}`);
-//Using type assertion
-const num = arr.filter((el) => {
-    return typeof el === "number";
-});
-console.log(`the numbers are ${num}`);
-const stringonly = arr.filter((el) => {
-    return typeof el === "string";
-});
+// let arr:(number|string|boolean)[]=[1,"hello",true]
+// console.log(`the mixed values are: ${arr}`)
+// //Using type assertion
+// const num:number[]=arr.filter((el):el is number=>{
+//     return typeof el === "number"
+// })
+// console.log(`the numbers are ${num}`);
+// const stringonly:string[]=arr.filter((el):el is string=>{
+// return typeof el === "string"
+// })
+//7.Write a TypeScript program that declares a variable as type any and uses a type assertion to explicitly cast it to type string.  
+//Click me to see the solution
+// Declare a variable 'anyValue' as type 'any'
+let anyValue = "This is type 'any'";
+// Use a type assertion to cast 'anyValue' to type 'string'
+let stringValue = anyValue;
+// Print the value and type of 'stringValue'
+console.log("stringValue:", stringValue);
+console.log("Type of stringValue:", typeof stringValue);
