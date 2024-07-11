@@ -70,30 +70,37 @@
 
 
     // Fiinding the difference of numbers
-    function differenceOfSquares(n:number):number {
-        let sum:number=0
-        let product:number=0
-        for (let i=0;i<n;i++){
-         sum= sum+i
-         product=product+sum;
-        }
-        let result:number= (sum*sum)-product
-        return result
+    // function differenceOfSquares(n:number):number {
+    //     let sum:number=0
+    //     let product:number=0
+    //     for (let i=0;i<n;i++){
+    //      sum= sum+i
+    //      product=product+sum;
+    //     }
+    //     let result:number= (sum*sum)-product
+    //     return result
+    // }
+    // console.log(differenceOfSquares(23))
+    // //Sorting usind array of arrays 
+    // function sort(initialArray:string[], sortingArray:number[]):string[] {
+    //     let newArr:string[]=[];
+    //     for (let a in initialArray){
+    //       console.log(initialArray[a])
+    //       newArr[sortingArray[a]]=initialArray[a]
+    //     }
+    //     return newArr
+    //   }
+    //   console.log(sort(['x', 'y', 'z'],[1,2,0]))
+    //   //retruning the sum of digits 
+    //   export function sumDigits(n: number): number {
+    //     let num = n.toString().split("").map((el)=>Number(el)).reduce((acc,curr)=>acc+curr,0)
+    //     return num
+    //   }
+    //   console.log(sumDigits(23))
+    
+    // Write a TypeScript program that declares a variable 'result' that can hold either a 'string' or a 'number'. Now write a function that takes an argument of type 'string | number | boolean' and logs its type.
+    type result=number|string|boolean;
+    function mynumber(x:result){
+        console.log(typeof mynumber)
     }
-    console.log(differenceOfSquares(23))
-    //Sorting usind array of arrays 
-    function sort(initialArray:string[], sortingArray:number[]):string[] {
-        let newArr:string[]=[];
-        for (let a in initialArray){
-          console.log(initialArray[a])
-          newArr[sortingArray[a]]=initialArray[a]
-        }
-        return newArr
-      }
-      console.log(sort(['x', 'y', 'z'],[1,2,0]))
-      //retruning the sum of digits 
-      export function sumDigits(n: number): number {
-        let num = n.toString().split("").map((el)=>Number(el)).reduce((acc,curr)=>acc+curr,0)
-        return num
-      }
-      console.log(sumDigits(23))
+    console.log(mynumber(true))

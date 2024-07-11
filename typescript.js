@@ -41,58 +41,7 @@
 //     name:"Pauline",
 //     employees:[kii]
 // }
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.sumDigits = sumDigits;
-// console.log(printstaff(Aline));
-// //How to use abstract class 
-// abstract class Computer {
-//     readonly id:number=0
-//     abstract brand:string;
-//     abstract ram:number;
-//     storage?:number
-//     abstract upgrade(num:number):number
-//     }
-//     class laptop implements Computer{
-//         name:string
-//         constructor(name:string){
-//         this.name=name
-//         }
-//      id=2
-//     brand="hp"
-//     ram=34
-//     upgrade(num:number):number{
-//         return 0
-//     }
-//     }
-//     const person = new laptop("lenevo");
-//     console.log(person.id)
-// let result:string | number;
-// function myNumber (x:string)
-// Fiinding the difference of numbers
-function differenceOfSquares(n) {
-    let sum = 0;
-    let product = 0;
-    for (let i = 0; i < n; i++) {
-        sum = sum + i;
-        product = product + sum;
-    }
-    let result = (sum * sum) - product;
-    return result;
+function mynumber(x) {
+    console.log(typeof mynumber);
 }
-console.log(differenceOfSquares(23));
-//Sorting usind array of arrays 
-function sort(initialArray, sortingArray) {
-    let newArr = [];
-    for (let a in initialArray) {
-        console.log(initialArray[a]);
-        newArr[sortingArray[a]] = initialArray[a];
-    }
-    return newArr;
-}
-console.log(sort(['x', 'y', 'z'], [1, 2, 0]));
-//retruning the sum of digits 
-function sumDigits(n) {
-    let num = n.toString().split("").map((el) => Number(el)).reduce((acc, curr) => acc + curr, 0);
-    return num;
-}
-console.log(sumDigits(23));
+console.log(mynumber(true));
