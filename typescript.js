@@ -1,3 +1,4 @@
+"use strict";
 // function myCount (arr:number[]){
 //     type User={
 //         [key:string]:number
@@ -40,7 +41,8 @@
 //     name:"Pauline",
 //     employees:[kii]
 // }
-
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.sumDigits = sumDigits;
 // console.log(printstaff(Aline));
 // //How to use abstract class 
 // abstract class Computer {
@@ -49,7 +51,6 @@
 //     abstract ram:number;
 //     storage?:number
 //     abstract upgrade(num:number):number
-    
 //     }
 //     class laptop implements Computer{
 //         name:string
@@ -65,35 +66,33 @@
 //     }
 //     const person = new laptop("lenevo");
 //     console.log(person.id)
-    // let result:string | number;
-    // function myNumber (x:string)
-
-
-    // Fiinding the difference of numbers
-    function differenceOfSquares(n:number):number {
-        let sum:number=0
-        let product:number=0
-        for (let i=0;i<n;i++){
-         sum= sum+i
-         product=product+sum;
-        }
-        let result:number= (sum*sum)-product
-        return result
+// let result:string | number;
+// function myNumber (x:string)
+// Fiinding the difference of numbers
+function differenceOfSquares(n) {
+    let sum = 0;
+    let product = 0;
+    for (let i = 0; i < n; i++) {
+        sum = sum + i;
+        product = product + sum;
     }
-    console.log(differenceOfSquares(23))
-    //Sorting usind array of arrays 
-    function sort(initialArray:string[], sortingArray:number[]):string[] {
-        let newArr:string[]=[];
-        for (let a in initialArray){
-          console.log(initialArray[a])
-          newArr[sortingArray[a]]=initialArray[a]
-        }
-        return newArr
-      }
-      console.log(sort(['x', 'y', 'z'],[1,2,0]))
-      //retruning the sum of digits 
-      export function sumDigits(n: number): number {
-        let num = n.toString().split("").map((el)=>Number(el)).reduce((acc,curr)=>acc+curr,0)
-        return num
-      }
-      console.log(sumDigits(23))
+    let result = (sum * sum) - product;
+    return result;
+}
+console.log(differenceOfSquares(23));
+//Sorting usind array of arrays 
+function sort(initialArray, sortingArray) {
+    let newArr = [];
+    for (let a in initialArray) {
+        console.log(initialArray[a]);
+        newArr[sortingArray[a]] = initialArray[a];
+    }
+    return newArr;
+}
+console.log(sort(['x', 'y', 'z'], [1, 2, 0]));
+//retruning the sum of digits 
+function sumDigits(n) {
+    let num = n.toString().split("").map((el) => Number(el)).reduce((acc, curr) => acc + curr, 0);
+    return num;
+}
+console.log(sumDigits(23));
