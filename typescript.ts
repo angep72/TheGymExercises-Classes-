@@ -185,7 +185,7 @@
 // console.log(mynumber(["Ange","Pauline"]))
 //9.Generics
 function identity <T>(arg:T):T{
-    return typeof arg
+    return  arg
 }
 console.log(identity("string"))
 

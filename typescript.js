@@ -169,6 +169,6 @@
 // console.log(mynumber(["Ange","Pauline"]))
 //9.Generics
 function identity(arg) {
-    return typeof arg;
+    return arg;
 }
 console.log(identity("string"));
