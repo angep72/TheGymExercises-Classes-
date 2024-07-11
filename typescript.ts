@@ -108,23 +108,47 @@
     // 
     //
     //  Write a TypeScript program that creates a function combine that accepts two parameters of types boolean and number. It returns a value that can be either a boolean or a number. Use a union type to achieve this.  
-    interface Car {
-        make:string;
-        model:string;
+    // interface Car {
+    //     make:string;
+    //     model:string;
+    // }
+    // type Bus= {
+    //     make:string;
+    //     model:string;
+    //     payload?:number
+    // }
+    // type Vehicle = Bus|Car
+    // const car:Car={
+    //     make:"Benz",
+    //     model:"p34"
+    // }
+    // const bus:Bus={
+    //     make:"Range",
+    //     model:"rava",
+    // }
+    // const vehicle:Vehicle[]=[car,bus]
+
+function mynumber(x:string|number):void{
+    if (typeof x === "string"){
+        console.log(`This is an official string bab`)
+    }if (typeof x === "number"){
+        console.log(`Hello this a number`)
     }
-    type Bus= {
-        make:string;
-        model:string;
-        payload?:number
     }
-    type Vehicle = Bus|Car
-    const car:Car={
-        make:"Benz",
-        model:"p34"
-    }
-    const bus:Bus={
-        make:"Range",
-        model:"rava",
-    }
-    const vehicle:Vehicle[]=[car,bus]
-    
+    console.log(mynumber(2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

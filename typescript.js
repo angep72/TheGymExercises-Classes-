@@ -41,12 +41,93 @@
 //     name:"Pauline",
 //     employees:[kii]
 // }
-const car = {
-    make: "Benz",
-    model: "p34"
-};
-const bus = {
-    make: "Range",
-    model: "rava",
-};
-const vehicle = [car, bus];
+// console.log(printstaff(Aline));
+// //How to use abstract class 
+// abstract class Computer {
+//     readonly id:number=0
+//     abstract brand:string;
+//     abstract ram:number;
+//     storage?:number
+//     abstract upgrade(num:number):number
+//     }
+//     class laptop implements Computer{
+//         name:string
+//         constructor(name:string){
+//         this.name=name
+//         }
+//      id=2
+//     brand="hp"
+//     ram=34
+//     upgrade(num:number):number{
+//         return 0
+//     }
+//     }
+//     const person = new laptop("lenevo");
+//     console.log(person.id)
+// let result:string | number;
+// function myNumber (x:string)
+// Fiinding the difference of numbers
+// function differenceOfSquares(n:number):number {
+//     let sum:number=0
+//     let product:number=0
+//     for (let i=0;i<n;i++){
+//      sum= sum+i
+//      product=product+sum;
+//     }
+//     let result:number= (sum*sum)-product
+//     return result
+// }
+// console.log(differenceOfSquares(23))
+// //Sorting usind array of arrays 
+// function sort(initialArray:string[], sortingArray:number[]):string[] {
+//     let newArr:string[]=[];
+//     for (let a in initialArray){
+//       console.log(initialArray[a])
+//       newArr[sortingArray[a]]=initialArray[a]
+//     }
+//     return newArr
+//   }
+//   console.log(sort(['x', 'y', 'z'],[1,2,0]))
+//   //retruning the sum of digits 
+//   export function sumDigits(n: number): number {
+//     let num = n.toString().split("").map((el)=>Number(el)).reduce((acc,curr)=>acc+curr,0)
+//     return num
+//   }
+//   console.log(sumDigits(23))
+// Write a TypeScript program that declares a variable 'result' that can hold either a 'string' or a 'number'. Now write a function that takes an argument of type 'string | number | boolean' and logs its type.
+// type result=number|string|boolean;
+// function mynumber(x:result){
+//     console.log(typeof mynumber)
+// }
+// console.log(mynumber(true))
+// 
+//
+//  Write a TypeScript program that creates a function combine that accepts two parameters of types boolean and number. It returns a value that can be either a boolean or a number. Use a union type to achieve this.  
+// interface Car {
+//     make:string;
+//     model:string;
+// }
+// type Bus= {
+//     make:string;
+//     model:string;
+//     payload?:number
+// }
+// type Vehicle = Bus|Car
+// const car:Car={
+//     make:"Benz",
+//     model:"p34"
+// }
+// const bus:Bus={
+//     make:"Range",
+//     model:"rava",
+// }
+// const vehicle:Vehicle[]=[car,bus]
+function mynumber(x) {
+    if (typeof x === "string") {
+        console.log(`This is an official string bab`);
+    }
+    if (typeof x === "number") {
+        console.log(`Hello this a number`);
+    }
+}
+console.log(mynumber(2));
