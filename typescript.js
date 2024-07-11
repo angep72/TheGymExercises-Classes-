@@ -122,12 +122,21 @@
 //     model:"rava",
 // }
 // const vehicle:Vehicle[]=[car,bus]
+// function mynumber(x:string|number):void{
+//     if (typeof x === "string"){
+//         console.log(`This is an official string bab`)
+//     }if (typeof x === "number"){
+//         console.log(`Hello this a number`)
+//     }
+//     }
+//     console.log(mynumber(2))
+//Type of guards typof 
 function mynumber(x) {
-    if (typeof x === "string") {
-        console.log(`This is an official string bab`);
-    }
     if (typeof x === "number") {
-        console.log(`Hello this a number`);
+        return true;
+    }
+    else {
+        return false;
     }
 }
-console.log(mynumber(2));
+console.log(mynumber(3));
