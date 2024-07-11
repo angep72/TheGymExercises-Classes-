@@ -161,9 +161,14 @@
 // console.log("Type of stringValue:", typeof stringValue);
 //8 Write a TypeScript function that accepts a parameter of type string | string[] and returns the length of the input string. It also returns the sum of the lengths of all strings in the array. Use type assertions to let TypeScript know the parameter type.  
 //Click me to see the solution
-function mynumber(x) {
-    let stringValues = (typeof x ? x : [x]);
-    let arrayValues = (typeof x ? [x] : x);
-    return arrayValues.map((el) => el.length).reduce((acc, curr) => acc + curr);
+// function mynumber(x:string|string[]):number{
+//     let stringValues:string=(typeof x ? x:[x]) as string;
+//     let arrayValues:string[]=(typeof x?[x]:x) as string[];
+// return arrayValues.map((el)=>el.length).reduce((acc,curr)=>acc+curr);
+// }
+// console.log(mynumber(["Ange","Pauline"]))
+//9.Generics
+function identity(arg) {
+    return typeof arg;
 }
-console.log(mynumber(["Ange", "Pauline"]));
+console.log(identity("string"));
