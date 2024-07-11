@@ -184,13 +184,19 @@
 // }
 // console.log(mynumber(["Ange","Pauline"]))
 //9.Generics
-function identity <T>(arg:T):T{
-    return  arg
+// function identity <T>(arg:T):T{
+//     return  arg
+// }
+// console.log(identity("string"))
+
+//Generics question 10
+function manynumber <T>(x:T[],t:number,y:number):T[] {
+    let num = x[t];
+   x[t]=x[y];
+    x[y]=num
+return x
 }
-console.log(identity("string"))
-
-
-
+console.log(manynumber([1,3,4,5,],0,3))
 
 
 
