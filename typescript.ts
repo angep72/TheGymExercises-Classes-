@@ -99,8 +99,32 @@
     //   console.log(sumDigits(23))
     
     // Write a TypeScript program that declares a variable 'result' that can hold either a 'string' or a 'number'. Now write a function that takes an argument of type 'string | number | boolean' and logs its type.
-    type result=number|string|boolean;
-    function mynumber(x:result){
-        console.log(typeof mynumber)
+    // type result=number|string|boolean;
+    // function mynumber(x:result){
+    //     console.log(typeof mynumber)
+    // }
+    // console.log(mynumber(true))
+    
+    // 
+    //
+    //  Write a TypeScript program that creates a function combine that accepts two parameters of types boolean and number. It returns a value that can be either a boolean or a number. Use a union type to achieve this.  
+    interface Car {
+        make:string;
+        model:string;
     }
-    console.log(mynumber(true))
+    type Bus= {
+        make:string;
+        model:string;
+        payload?:number
+    }
+    type Vehicle = Bus|Car
+    const car:Car={
+        make:"Benz",
+        model:"p34"
+    }
+    const bus:Bus={
+        make:"Range",
+        model:"rava",
+    }
+    const vehicle:Vehicle[]=[car,bus]
+    

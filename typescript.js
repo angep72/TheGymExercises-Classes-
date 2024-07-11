@@ -41,7 +41,12 @@
 //     name:"Pauline",
 //     employees:[kii]
 // }
-function mynumber(x) {
-    console.log(typeof mynumber);
-}
-console.log(mynumber(true));
+const car = {
+    make: "Benz",
+    model: "p34"
+};
+const bus = {
+    make: "Range",
+    model: "rava",
+};
+const vehicle = [car, bus];
