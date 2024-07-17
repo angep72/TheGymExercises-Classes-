@@ -173,10 +173,70 @@
 // }
 // console.log(identity("string"))
 //Generics question 10
-function manynumber(x, t, y) {
-    let num = x[t];
-    x[t] = x[y];
-    x[y] = num;
-    return x;
-}
-console.log(manynumber([1, 3, 4, 5,], 0, 3));
+// function manynumber <T>(x:T[],t:number,y:number):T[] {
+//     let num = x[t];
+//    x[t]=x[y];
+//     x[y]=num
+// return x
+// }
+// console.log(manynumber([1,3,4,5,],0,3))
+// type Fish={
+//     name:string
+//     swim:()=>void
+// }
+// type Animal ={
+//     name:string
+//     fly:()=>void
+// }
+// type Person = Fish|Animal
+// function isBird(bird:Person):bird is Animal{
+// return false
+// }
+// const myPet:Person={
+// name:"Ange",
+// fly(){
+// console.log("hello prtty")
+// }
+// }
+// if (isBird(myPet)){
+//     console.log(myPet.fly)
+// }
+// Define the discriminant property 'kind' with unique literal values
+// type Circle = {
+//     kind: 'circle';
+//     radius: number;
+// };
+// type Square = {
+//     kind: 'square';
+//     sideLength: number;
+// };
+// type Rectangle = {
+//     kind: 'rectangle';
+//     width: number;
+//     height: number;
+// };
+let num;
+// Create a discriminated union type
+// type Shape = Circle | Square | Rectangle;
+// // Function to compute the area of a shape using discriminant property
+// function getArea(shape: Shape): number {
+//     switch (shape.kind) {
+//         case 'circle':
+//             return Math.PI * shape.radius ** 2;
+//         case 'square':
+//             return shape.sideLength ** 2;
+//         case 'rectangle':
+//             return shape.width * shape.height;
+//         default:
+//             // This ensures all cases are handled
+//             const _exhaustiveCheck: never = shape;
+//             return _exhaustiveCheck;
+//     }
+// }
+// // Example usage
+// const myCircle: Shape = { kind: 'circle', radius: 10 };
+// console.log(getArea(myCircle)); // Output: 314.1592653589793
+// const mySquare: Shape = { kind: 'square', sideLength: 5 };
+// console.log(getArea(mySquare)); // Output: 25
+// const myh: Shape = { kind: 'rectangle', width: 4, height: 6 };
+// console.log(getArea(myh)); // Output: 24
